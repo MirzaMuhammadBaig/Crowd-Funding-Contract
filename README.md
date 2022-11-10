@@ -16,38 +16,49 @@
 
 #### Contract Explanation
 
-1. - Address of manager is equal to deployer address. 
-2. - numCampaigns are showing that, how many campaigns have been created.
-3. - timeDeadline is showing that which time campaign will be end.
-4. - raisedAmount are showing that how much amount have been deposited in contract.
-5. - targetedAmount are showing that how much amount have required.
-6. - numOfContributors are showing that how many users have deposited amount in contract.
-7. - minimumContribution are showing that how much amount must deposit.
+
+##### 1. State Variables
+
+- Address of manager is equal to deployer address. 
+- numCampaigns are showing that, how many campaigns have been created.
+- timeDeadline is showing that which time campaign will be end.
+- raisedAmount are showing that how much amount have been deposited in contract.
+- targetedAmount are showing that how much amount have required.
+- numOfContributors are showing that how many users have deposited amount in contract.
+- minimumContribution are showing that how much amount must deposit.
 
 
-8. - Struct of CreateCampaign store data of campaign.
-9. - Campaigns mapping show data of campaign.
-10. - contributors mapping show, how much amount have deposited from input address.
+##### 2. Struct
 
+- Struct of CreateCampaign store data of campaign.
+
+
+##### 3. Mappings
+
+- Campaigns mapping show data of campaign.
+- contributors mapping show, how much amount have deposited from input address.
+
+
+##### 4. Constructor
 
 11. - constructor set targetedAmount and timeDeadline.
 
 
+##### 5. Modifier
+
 12. - Modifier of onlyManger set the address of modifier is equal to msg.sender. 
 
 
-13. - sendAmount function send the amount to campaign with check conditions.
+##### 6. Functions
 
+13. - sendAmount function send the amount to campaign with check conditions.
 
 14. - getContractBalance show the total balance of contract.
 
-
 15. - refund function, refund the amount with check the conditions.
-
 
 16. - createCampaign function can only call the contract managera and that function set campaign data.
 
 17. - voteToCampaign functions give votes to campaign.
-
 
 18. - ClaimFunds function claim the amount of campaign, but when the campaign will be end and targeted value also met.
